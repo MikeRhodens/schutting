@@ -1,7 +1,7 @@
 <section>
     <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
-        <div class="header">
+        <div class="header testimonials">
             <p>Julien Clerc : Noe</p>
 
         </div>
@@ -22,7 +22,7 @@
 <section>
     <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
-        <div class="header">
+        <div class="header testimonials">
             <p>Julien Clerc : Noe</p>
 
         </div>
@@ -43,7 +43,7 @@
 <section>
     <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
-        <div class="header">
+        <div class="header testimonials">
             <p>Julien Clerc : Noe</p>
 
         </div>
@@ -64,7 +64,7 @@
 <section>
     <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
-        <div class="header">
+        <div class="header testimonials">
             <p>Julien Clerc : Noe</p>
 
         </div>
@@ -85,7 +85,7 @@
 <section>
     <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
-        <div class="header">
+        <div class="header testimonials">
             <p>Julien Clerc : Noe</p>
 
         </div>
