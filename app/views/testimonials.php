@@ -1,8 +1,8 @@
 <section>
-    <img src="img/random_Avatar.png" alt=""/>
+    <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
         <div class="header">
-            <div class="num">95</div><p>Julien Clerc : Noe</p>
+            <p>Julien Clerc : Noe</p>
 
         </div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus nulla, sollicitudin eget,
@@ -20,10 +20,10 @@
     </div>
 </section>
 <section>
-    <img src="img/random_Avatar.png" alt=""/>
+    <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
         <div class="header">
-            <div class="num">95</div><p>Julien Clerc : Noe</p>
+            <p>Julien Clerc : Noe</p>
 
         </div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus nulla, sollicitudin eget,
@@ -41,10 +41,10 @@
     </div>
 </section>
 <section>
-    <img src="img/random_Avatar.png" alt=""/>
+    <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
         <div class="header">
-            <div class="num">95</div><p>Julien Clerc : Noe</p>
+            <p>Julien Clerc : Noe</p>
 
         </div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus nulla, sollicitudin eget,
@@ -62,10 +62,10 @@
     </div>
 </section>
 <section>
-    <img src="img/random_Avatar.png" alt=""/>
+    <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
         <div class="header">
-            <div class="num">95</div><p>Julien Clerc : Noe</p>
+            <p>Julien Clerc : Noe</p>
 
         </div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus nulla, sollicitudin eget,
@@ -83,10 +83,10 @@
     </div>
 </section>
 <section>
-    <img src="img/random_Avatar.png" alt=""/>
+    <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
         <div class="header">
-            <div class="num">95</div><p>Julien Clerc : Noe</p>
+            <p>Julien Clerc : Noe</p>
 
         </div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus nulla, sollicitudin eget,

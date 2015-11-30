@@ -7,7 +7,10 @@ class switch_include{
     {
         $pagesAvailable = array(
             'home',
-            'usr_info'
+            'details',
+            'top',
+            'testimonials',
+            'prijsvraag'
         );
         if(in_array($page,$pagesAvailable)){
             return  'app/views/' . $page . '.php';
