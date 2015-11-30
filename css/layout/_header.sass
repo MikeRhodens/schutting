@@ -1,0 +1,189 @@
+header
+  width: 1026px
+  height: 234px
+  font-family: Tahoma, Verdana, Segoe, sans-serif
+
+.nav
+  border-width: 1px 0
+  text-align: right
+  margin: 0
+  padding: 0
+
+.nav li
+  display: inline
+  margin: 0
+
+.nav a
+  display: inline-block
+  padding: 10px
+  color: $color-small
+  font-size: 0.688em
+  text-decoration: none
+#logo
+  float: left
+
+#menuContainer
+  width: 500px
+  float: left
+  margin-left: 40px
+
+#menuContainer h1
+  font-family: bubbleDot
+  font-size: 41px
+
+#menuContainer #menu
+  margin-top: 27px
+  width: 100%
+  float: left
+  height: 38px
+
+#menuContainer #menu #radioBtn
+  width: 128px
+  height: 38px
+  background-image: url(../img/buttons/radio1_btn.png)
+  float: left
+  cursor: pointer
+#menuContainer #menu #top100Btn
+  width: 126px
+  height: 38px
+  background-image: url(../img/buttons/top100.png)
+  float: left
+
+#menuContainer #menu #top100Btn:hover
+  width: 126px
+  height: 38px
+  cursor: pointer
+  background-image: url(../img/buttons/top100_hover.png)
+  float: left
+
+#menuContainer #menu #search
+  width: 160px
+  height: 38px
+  background-image: url(../img/buttons/search.png)
+  float: left
+
+#menuContainer #menu #search #inputSearch
+  width: 117px
+  height: 23px
+  background-image: url(../img/buttons/input_search.png)
+  text-decoration: none
+  border: 0
+  color: $color-small
+  text-align: center
+  font-family: Tahoma, Verdana, Segoe, sans-serif
+  font-size: 11px
+  outline: 0
+  padding: 0
+  margin-top: 8px
+  margin-left: 8px
+  float: left
+
+#menuContainer #menu #search #submitSearch
+  width: 25px
+  height: 23px
+  background-image: url("../img/buttons/search_btn.png")
+  border: 0
+  outline: 0
+  padding: 0
+  float: left
+  margin-top: 8px
+  cursor: pointer
+#rightContent
+  float: right
+  width: 150px
+  height: 150px
+  text-align: right
+#rightContent img
+  margin-top: 16px
+#rightContent #fontChanger
+  font-family: bubbleDot
+  width: 100px
+  float: right
+  color: $color-small
+  cursor: pointer
+#rightContent #fontChanger span:nth-child(1)
+  font-size: 10px
+#rightContent #fontChanger span:nth-child(2)
+  font-size: 20px
+  color: $blue-shine
+#rightContent #fontChanger span:nth-child(3)
+  font-size: 30px
+#rightContent #fontChanger span:hover
+  color: $blue-shine
+#date
+  width: 1026px
+  height: 41px
+#date
+  img
+    margin: 0
+    padding: 0
+  #month
+    width: 115px
+    height: 41px
+    background-image: url(../img/date.png)
+    float: left
+  .upcomming
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6bf24+1,ffdf04+20,ffffff+75
+    background: #f6bf24
+    /* Old browsers
+    background: -moz-linear-gradient(top, #f6bf24 1%, #ffdf04 20%, #ffffff 75%)
+    /* FF3.6-15
+    background: -webkit-linear-gradient(top, #f6bf24 1%, #ffdf04 20%, #ffffff 75%)
+    /* Chrome10-25,Safari5.1-6
+    background: linear-gradient(to bottom, #f6bf24 1%, #ffdf04 20%, #ffffff 75%)
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6bf24', endColorstr='#ffffff',GradientType=0 )
+    /* IE6-9
+    width: 35px
+    height: 38px
+    float: left
+    border-top: 2px solid #ffffff
+    position: relative
+  p
+    position: absolute
+    color: black
+    font-family: frankin_go
+    font-weight: bold
+    bottom: 10px
+    padding-left: 10px
+    border-left: 1px solid black
+    -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%
+    -webkit-border-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%
+    -moz-border-image: -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%
+    -o-border-image: -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%
+    border-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%
+  .past
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#565551+1,949494+20,d6d6d6+47,ffffff+79
+    background: #565551
+    /* Old browsers
+    background: -moz-linear-gradient(top, #565551 1%, #949494 20%, #d6d6d6 47%, #ffffff 79%)
+    /* FF3.6-15
+    background: -webkit-linear-gradient(top, #565551 1%, #949494 20%, #d6d6d6 47%, #ffffff 79%)
+    /* Chrome10-25,Safari5.1-6
+    background: linear-gradient(to bottom, #565551 1%, #949494 20%, #d6d6d6 47%, #ffffff 79%)
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#565551', endColorstr='#ffffff',GradientType=0 )
+    /* IE6-9
+    width: 35px
+    height: 38px
+    float: left
+    border-top: 2px solid #ffffff
+    position: relative
+  .correct
+    p
+      border: none
+    background-color: #ffffff
+    width: 33px
+    height: 36px
+    float: left
+    border: 2px solid red
+    position: relative
+  #rightEnd
+    float: right
+    width: 104px
+    height: 40px
+    background-image: url(../img/rightBox.png)
+
+
+
+

@@ -1,0 +1,427 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: bubbleDot;
+  src: url(../font/bubbledot_icg.ttf); }
+@font-face {
+  font-family: frankin_gothic;
+  src: url(../font/franklin-gothic-medium.ttf); }
+header {
+  width: 1026px;
+  height: 234px;
+  font-family: Tahoma, Verdana, Segoe, sans-serif; }
+
+.nav {
+  border-width: 1px 0;
+  text-align: right;
+  margin: 0;
+  padding: 0; }
+
+.nav li {
+  display: inline;
+  margin: 0; }
+
+.nav a {
+  display: inline-block;
+  padding: 10px;
+  color: #b3b3b3;
+  font-size: 0.688em;
+  text-decoration: none; }
+
+#logo {
+  float: left; }
+
+#menuContainer {
+  width: 500px;
+  float: left;
+  margin-left: 40px; }
+
+#menuContainer h1 {
+  font-family: bubbleDot;
+  font-size: 41px; }
+
+#menuContainer #menu {
+  margin-top: 27px;
+  width: 100%;
+  float: left;
+  height: 38px; }
+
+#menuContainer #menu #radioBtn {
+  width: 128px;
+  height: 38px;
+  background-image: url(../img/buttons/radio1_btn.png);
+  float: left;
+  cursor: pointer; }
+
+#menuContainer #menu #top100Btn {
+  width: 126px;
+  height: 38px;
+  background-image: url(../img/buttons/top100.png);
+  float: left; }
+
+#menuContainer #menu #top100Btn:hover {
+  width: 126px;
+  height: 38px;
+  cursor: pointer;
+  background-image: url(../img/buttons/top100_hover.png);
+  float: left; }
+
+#menuContainer #menu #search {
+  width: 160px;
+  height: 38px;
+  background-image: url(../img/buttons/search.png);
+  float: left; }
+
+#menuContainer #menu #search #inputSearch {
+  width: 117px;
+  height: 23px;
+  background-image: url(../img/buttons/input_search.png);
+  text-decoration: none;
+  border: 0;
+  color: #b3b3b3;
+  text-align: center;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-size: 11px;
+  outline: 0;
+  padding: 0;
+  margin-top: 8px;
+  margin-left: 8px;
+  float: left; }
+
+#menuContainer #menu #search #submitSearch {
+  width: 25px;
+  height: 23px;
+  background-image: url("../img/buttons/search_btn.png");
+  border: 0;
+  outline: 0;
+  padding: 0;
+  float: left;
+  margin-top: 8px;
+  cursor: pointer; }
+
+#rightContent {
+  float: right;
+  width: 150px;
+  height: 150px;
+  text-align: right; }
+
+#rightContent img {
+  margin-top: 16px; }
+
+#rightContent #fontChanger {
+  font-family: bubbleDot;
+  width: 100px;
+  float: right;
+  color: #b3b3b3;
+  cursor: pointer; }
+
+#rightContent #fontChanger span:nth-child(1) {
+  font-size: 10px; }
+
+#rightContent #fontChanger span:nth-child(2) {
+  font-size: 20px;
+  color: #07B4E7; }
+
+#rightContent #fontChanger span:nth-child(3) {
+  font-size: 30px; }
+
+#rightContent #fontChanger span:hover {
+  color: #07B4E7; }
+
+#date {
+  width: 1026px;
+  height: 41px; }
+
+#date img {
+  margin: 0;
+  padding: 0; }
+#date #month {
+  width: 115px;
+  height: 41px;
+  background-image: url(../img/date.png);
+  float: left; }
+#date .upcomming {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6bf24+1,ffdf04+20,ffffff+75 */
+  background: #f6bf24;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f6bf24 1%, #ffdf04 20%, #ffffff 75%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f6bf24 1%, #ffdf04 20%, #ffffff 75%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f6bf24 1%, #ffdf04 20%, #ffffff 75%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6bf24', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+  width: 35px;
+  height: 38px;
+  float: left;
+  border-top: 2px solid #ffffff;
+  position: relative; }
+#date p {
+  position: absolute;
+  color: black;
+  font-family: frankin_go;
+  font-weight: bold;
+  bottom: 10px;
+  padding-left: 10px;
+  border-left: 1px solid black;
+  -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(transparent)) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(black, transparent) 1 100%;
+  -moz-border-image: -moz-linear-gradient(black, transparent) 1 100%;
+  -o-border-image: -o-linear-gradient(black, transparent) 1 100%;
+  border-image: linear-gradient(to bottom, black, transparent) 1 100%; }
+#date .past {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#565551+1,949494+20,d6d6d6+47,ffffff+79 */
+  background: #565551;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #565551 1%, #949494 20%, #d6d6d6 47%, #ffffff 79%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #565551 1%, #949494 20%, #d6d6d6 47%, #ffffff 79%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #565551 1%, #949494 20%, #d6d6d6 47%, #ffffff 79%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#565551', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+  width: 35px;
+  height: 38px;
+  float: left;
+  border-top: 2px solid #ffffff;
+  position: relative; }
+#date .correct {
+  background-color: #ffffff;
+  width: 33px;
+  height: 36px;
+  float: left;
+  border: 2px solid red;
+  position: relative; }
+  #date .correct p {
+    border: none; }
+#date #rightEnd {
+  float: right;
+  width: 104px;
+  height: 40px;
+  background-image: url(../img/rightBox.png); }
+
+.content section {
+  width: 100%;
+  height: 150px;
+  padding: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  float: left;
+  margin-bottom: 35px; }
+
+.content section img {
+  margin-right: 20px;
+  float: left;
+  display: table-cell; }
+
+.content section .inside {
+  word-break: break-word;
+  font-family: Tahoma;
+  font-size: 0.688em;
+  min-height: 150px;
+  width: 100%;
+  display: table-cell;
+  line-height: 18px; }
+
+.content section .inside .header {
+  width: 100%;
+  height: 50px; }
+
+.content section .inside .header p {
+  color: black;
+  font-family: frankin_gothic;
+  font-size: 20px;
+  margin-bottom: 20px;
+  width: 300px;
+  margin-left: 10px;
+  float: left;
+  margin-top: 10px; }
+
+.num {
+  font-family: frankin_gothic;
+  color: white;
+  background-color: #E40101;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.25em;
+  width: 30px;
+  float: left; }
+
+.content section .inside .footer {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  color: black; }
+
+.content section .inside .footer img {
+  margin: 0; }
+
+.content section .inside .footer p {
+  padding-top: 8px;
+  margin-left: 20px;
+  display: inline; }
+
+.content section .inside .footer .social {
+  float: right; }
+
+.content section .inside .footer .social img {
+  margin-left: 4px; }
+
+.content section .inside .footer span {
+  color: #07B4E7; }
+
+.content section .inside .footer a {
+  font-weight: bold;
+  text-decoration: none; }
+
+#headerDetails {
+  width: 100%;
+  height: 100px; }
+
+.sidebox {
+  width: 230px;
+  height: auto;
+  float: right;
+  margin-right: 38px; }
+
+.sidebox img {
+  margin-bottom: 40px;
+  cursor: pointer; }
+
+.sidebox img:last-child {
+  margin-bottom: 0px; }
+
+.sidebox #smallDynamic {
+  background-image: url(../img/sidebar_dynamictitle.png);
+  width: 230px;
+  height: 115px;
+  margin-bottom: 40px;
+  position: relative; }
+
+.sidebox #smallDynamic p {
+  color: white;
+  font-family: frankin_gothic;
+  font-size: 15px;
+  position: absolute;
+  bottom: 12%;
+  left: 5%; }
+
+.sidebox #bigDynamic {
+  background-image: url(../img/sidebar_dynamis.png);
+  width: 230px;
+  height: 115px;
+  margin-bottom: 40px;
+  position: relative; }
+
+.sidebox #bigDynamic p {
+  color: white;
+  font-family: frankin_gothic;
+  font-size: 15px;
+  position: absolute;
+  bottom: 8%;
+  left: 5%;
+  width: 205px;
+  word-break: break-word; }
+
+.titlePageHeader {
+  margin-top: 20px;
+  width: 100%;
+  text-align: left;
+  font-family: frankin_gothic;
+  margin-left: 30px; }
+
+.titlePageHeader p {
+  color: #e40101;
+  font-size: 1.25em;
+  padding-left: 12px; }
+
+.horizontal_dotted_line {
+  border-bottom: 1px dotted #666666;
+  width: 680px;
+  margin-top: 7px; }
+
+.content {
+  width: 673px;
+  min-height: 1200px;
+  height: auto;
+  margin: 38px;
+  margin-top: 20px;
+  overflow: hidden; }
+
+footer {
+  background-image: url("../img/footer_bg.jpg");
+  width: 100%;
+  height: 31px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 10px;
+  box-sizing: border-box; }
+
+footer li {
+  display: inline-block; }
+
+footer a {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-size: 0.688em;
+  width: 300px;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+footer a:hover {
+  color: white; }
+
+body {
+  color: #130708;
+  background-color: white;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  font-size: 1em; }
+
+#container {
+  width: 1026px;
+  margin: 0 auto;
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */
