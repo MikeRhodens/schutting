@@ -1,21 +1,19 @@
 <?php
-function unlock()
+function get_days()
 {
     $date = date("d");
     $days = 0;
-    $day_array = [
-        $active = [],
-        $current = [],
-        $not_active = []
-    ];
+    $days_array = [];
 
-    while ($days < 30) {
+    while ($days < 24) {
         if ($days < $date) {
-            array_push($day_array[0], '<a href=\""')
-            echo "<a href=\"?action=" . $days . "\">" . $days . "</a><br>";
+            array_push($days_array, '<div class="past"><p>' . $days . '</p></div>');
+        } else if ($days == $date) {
+            array_push($days_array, '<div class="correct"><p>' . $days . '</p></div>');
         } else {
-            echo $days . "<br>";
+            array_push($days_array, '<div class="upcomming"><p>' . $days . '</p></div>');
         }
         $days = $days + 1;
     }
+    return $days_array;
 }

@@ -52,75 +52,12 @@
     </header>
     <div id="date">
         <div id="month"></div>
-        <div class="past">
-            <p>2</p>
-        </div>
-        <div class="past">
-            <p>3</p>
-        </div>
-        <div class="correct">
-            <p>4</p>
-        </div>
-        <div class="upcomming">
-            <p>5</p>
-        </div>
-        <div class="upcomming">
-            <p>6</p>
-        </div>
-        <div class="upcomming">
-            <p>7</p>
-        </div>
-        <div class="upcomming">
-            <p>8</p>
-        </div>
-        <div class="upcomming">
-            <p>9</p>
-        </div>
-        <div class="upcomming">
-            <p>10</p>
-        </div>
-        <div class="upcomming">
-            <p>11</p>
-        </div>
-        <div class="upcomming">
-            <p>12</p>
-        </div>
-        <div class="upcomming">
-            <p>13</p>
-        </div>
-        <div class="upcomming">
-            <p>14</p>
-        </div>
-        <div class="upcomming">
-            <p>15</p>
-        </div>
-        <div class="upcomming">
-            <p>16</p>
-        </div>
-        <div class="upcomming">
-            <p>17</p>
-        </div>
-        <div class="upcomming">
-            <p>18</p>
-        </div>
-        <div class="upcomming">
-            <p>19</p>
-        </div>
-        <div class="upcomming">
-            <p>20</p>
-        </div>
-        <div class="upcomming">
-            <p>21</p>
-        </div>
-        <div class="upcomming">
-            <p>22</p>
-        </div>
-        <div class="upcomming">
-            <p>23</p>
-        </div>
-        <div class="upcomming">
-            <p>24</p>
-        </div>
+        <?php
+        $date_array = get_days();
+        foreach($date_array as $value){
+            echo $value;
+        }
+        ?>
         <div id="rightEnd" style="float: right"></div>
     </div>
     <div class="titlePageHeader">
