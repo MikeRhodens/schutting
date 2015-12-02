@@ -1,8 +1,9 @@
 <section>
-    <img src="img/img_testimonials.png" alt=""/>
+
+    <img class="shadow" src="img/img_testimonials.png" alt=""/>
     <div class="inside">
-        <div class="header testimonials">
-            <p>Julien Clerc : Noe</p>
+        <div class="header">
+            <p class="testimonials">Julien Clerc : Noe</p>
 
         </div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus nulla, sollicitudin eget,
@@ -22,8 +23,8 @@
 <section>
     <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
-        <div class="header testimonials">
-            <p>Julien Clerc : Noe</p>
+        <div class="header">
+            <p class="testimonials">Julien Clerc : Noe</p>
 
         </div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus nulla, sollicitudin eget,
@@ -43,8 +44,8 @@
 <section>
     <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
-        <div class="header testimonials">
-            <p>Julien Clerc : Noe</p>
+        <div class="header">
+            <p class="testimonials">Julien Clerc : Noe</p>
 
         </div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus nulla, sollicitudin eget,
@@ -64,8 +65,8 @@
 <section>
     <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
-        <div class="header testimonials">
-            <p>Julien Clerc : Noe</p>
+        <div class="header">
+            <p class="testimonials">Julien Clerc : Noe</p>
 
         </div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus nulla, sollicitudin eget,
@@ -85,8 +86,8 @@
 <section>
     <img src="img/img_testimonials.png" alt=""/>
     <div class="inside">
-        <div class="header testimonials">
-            <p>Julien Clerc : Noe</p>
+        <div class="header">
+            <p class="testimonials">Julien Clerc : Noe</p>
 
         </div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus nulla, sollicitudin eget,
