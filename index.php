@@ -10,9 +10,9 @@ $filename = 'songs.txt';
 $contents = file($filename);
 $array = [];
 foreach($contents as $line) {
-    $array[] = explode('-',$line,3);
+    $array[] = explode('-',$line,4);
 }
 
 foreach($array as $value) {
-    connection::getInstance()->query("INSERT INTO songs(`name`,`artist`,`day`) VALUES ('$value[0]','$value[1]','$value[2]')");
+    connection::getInstance()->query("INSERT INTO songs(`hitNr`,`name`,`artist`,`day`) VALUES ('$value[0]','$value[1]','$value[2]','$value[3]')");
 }
