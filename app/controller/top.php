@@ -16,13 +16,25 @@ $position = [
     $pos3 = [3, 6, 9, 11, 13, 15, 18, 21, 24, 29, 31, 33, 36, 39, 42, 47, 49, 51, 54, 57, 60, 65, 67, 69, 72, 74, 76, 79, 82, 85, 88, 93, 95, 97, 100],
     $pos4 = [2, 7, 14, 17, 20, 25, 25, 32, 35, 38, 43, 45, 50, 53, 56, 56, 61, 63, 68, 71, 75, 78, 81, 84, 89, 91, 96, 99]
 ];
+$date = date("d");
+
+$a = 0;
+$b = 0;
+$c = 0;
+while($a < $date){
+    if($b < 8){
+       $c += 5;
+        $b++;
+    }else{
+        $c += 4;
+    }
+    $a++;
+}
 
 if ($result) {
     foreach ($result as $each) {
-        if ($number < 27) {
+        if ($number < $c) {
             $number++;
-
-
             if(in_array($number,$pos1)){
                 $current_pos = 1;
             }elseif(in_array($number,$pos2)){
