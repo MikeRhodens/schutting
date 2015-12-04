@@ -9,21 +9,63 @@ $top100 = new topList();
 $result = $top100->returnTop();
 $display = "";
 $number = 1;
-
+$position = [
+    $pos1 = [1,4,8,10,19,22,26,28,37,40,44,46,55,58,62,64,83,86,90,92],
+    $pos2 = [5,12,16,23,30,34,41,48,52,59,66,70,73,77,80,87,94,98],
+    $pos3 = [3,6,9,11,13,15,18,21,24,29,31,33,36,39,42,47,49,51,54,57,60,65,67,69,72,74,76,79,82,85,88,93,95,97,100],
+    $pos4 = [2,7,14,17,20,25,25,32,35,38,43,45,50,53,56,56,61,63,68,71,75,78,81,84,89,91,96,99]
+];
 
 if ($result) {
     foreach ($result as $each) {
         if ($number < 26) {
             $number++;
-            $display .= '<div class="rootContainer">
-                        <div  class="numbers plus" style="">' . $each['id'] . '</div>
+            if(in_array($each,$position[0])){
+                $block = '<div class="rootContainer">
+                        <div  class="numbers plus pos1" style="">' . $each['id'] . '</div>
                             <p class="title">'.$each['artist']. '-' . $each['name'] . '</p>
                         </div>';
+            }elseif(in_array($each,$position[1])){
+                $block = '<div class="rootContainer">
+                        <div  class="numbers plus pos2" style="">' . $each['id'] . '</div>
+                            <p class="title">'.$each['artist']. '-' . $each['name'] . '</p>
+                        </div>';
+            }elseif(in_array($each,$position[2])){
+                $block = '<div class="rootContainer">
+                        <div  class="numbers plus pos3" style="">' . $each['id'] . '</div>
+                            <p class="title">'.$each['artist']. '-' . $each['name'] . '</p>
+                        </div>';
+            }elseif(in_array($each,$position[3])){
+                $block = '<div class="rootContainer">
+                        <div  class="numbers plus pos4" style="">' . $each['id'] . '</div>
+                            <p class="title">'.$each['artist']. '-' . $each['name'] . '</p>
+                        </div>';
+            }
+
+            $display .= $block;
         } else {
-            $display .= '<div class="rootContainer">
-                        <div  class="numbers minus" style="">' . $each['id'] . '</div>
+            if(in_array($each,$position[0])){
+                $block = '<div class="rootContainer">
+                        <div  class="numbers minus pos1" style="">' . $each['id'] . '</div>
                             <p class="title">'.$each['artist']. '-' . $each['name'] . '</p>
                         </div>';
+            }elseif(in_array($each,$position[1])){
+                $block = '<div class="rootContainer">
+                        <div  class="numbers minus pos2" style="">' . $each['id'] . '</div>
+                            <p class="title">'.$each['artist']. '-' . $each['name'] . '</p>
+                        </div>';
+            }elseif(in_array($each,$position[2])){
+                $block = '<div class="rootContainer">
+                        <div  class="numbers minus pos3" style="">' . $each['id'] . '</div>
+                            <p class="title">'.$each['artist']. '-' . $each['name'] . '</p>
+                        </div>';
+            }elseif(in_array($each,$position[3])){
+                $block = '<div class="rootContainer">
+                        <div  class="numbers minus pos4" style="">' . $each['id'] . '</div>
+                            <p class="title">'.$each['artist']. '-' . $each['name'] . '</p>
+                        </div>';
+            }
+            $display .= $block;
         }
     }
 }
