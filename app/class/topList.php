@@ -14,7 +14,7 @@ class topList{
     }
 
     public function returnTop(){
-        $data = $this->connection->query("SELECT id,name,artist FROM songs ");
+        $data = $this->connection->query("SELECT id,name,artist FROM songs");
         return $data
                 ? $data
                 : false;
