@@ -393,6 +393,18 @@ header {
   left: 100px;
   margin-top: 10px; }
 
+.pos1 {
+  margin-left: 10px; }
+
+.pos2 {
+  margin-left: 8px; }
+
+.pos3 {
+  margin-left: 6px; }
+
+.pos4 {
+  margin-left: 4px; }
+
 .titlePageHeader {
   margin-top: 20px;
   width: 100%;
