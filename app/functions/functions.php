@@ -43,3 +43,12 @@ function createTrueTimeDate($timeDate){
     $currentMonthString = convertDateToString($day[1]);
     return $day[2] . ' ' . $currentMonthString . ' ' . $day[0] . ' ' . $hour[0] . ':' . $hour[1];
 }
+function shortenString($string){
+    if(strlen($string) > 200){
+       $rest = substr($string,0,-((strlen($string) - 200)));
+        $rest .= ' ....';
+    }else{
+        $rest = $string;
+    }
+    return $rest;
+}

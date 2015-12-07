@@ -17,7 +17,7 @@ class home
 
     public function getSongs($date_id)
     {
-        $query = 'SELECT * FROM songs WHERE day = ' . $date_id;
+        $query = 'SELECT * FROM songs WHERE day = ' . $date_id.'';
         $data = $this->connection->query($query);
         return $data;
     }
