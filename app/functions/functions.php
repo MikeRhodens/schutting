@@ -7,9 +7,9 @@ function get_days()
 
     while ($days < 25) {
         if ($days < $date) {
-            array_push($days_array, '<div class="past"><a href=""><p>' . $days . '</p></a></div>');
+            array_push($days_array, '<div class="past"><a href="?page=home&day='.$days.'"><p>' . $days . '</p></a></div>');
         } else if ($days == $date) {
-            array_push($days_array, '<div class="correct"><a href=""><p>' . $days . '</p></a></div>');
+            array_push($days_array, '<div class="correct"><a href="?page=home&day='.$days.'"><p>' . $days . '</p></a></div>');
         } else {
             array_push($days_array, '<div class="upcomming"><p>' . $days . '</p></div>');
         }
