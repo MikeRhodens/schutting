@@ -42,7 +42,7 @@ if (Input::get("id") && $detail->doDetailExist()) {
     </div>';
     }
     $amountOfSongs = (100 - getSongsOnDay());
-    if ($songTopNr <= $amountOfSongs+1) {
+    if ($songTopNr <= $amountOfSongs + 1) {
         $mintext .= '<div id="upcoming"></div>';
     } else {
         $mintext .= ' <div id="upcoming">
