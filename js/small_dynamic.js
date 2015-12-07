@@ -10,7 +10,7 @@ var quotesSmall = [
     "Het is een grappige bericht",
     "Ranom informatie",
     "Jaja wel live",
-    "Tour door Pool gewonnen",
+    "Tour door nederlander gewonnen",
     "Wie gaat het winnen",
     "Luister je mee?",
     "Alles wat je nodig hebt"
