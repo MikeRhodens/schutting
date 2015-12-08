@@ -317,6 +317,142 @@ header {
   font-weight: bold;
   text-decoration: none; }
 
+#detailsHeader {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+  float: left; }
+
+#DetailsContent {
+  width: 100%;
+  font-size: 11px;
+  font-family: Tahoma;
+  color: #454545;
+  margin-top: 35px;
+  float: left;
+  display: inline-block;
+  line-height: 18px; }
+  #DetailsContent .social {
+    float: right;
+    margin-top: 10px; }
+
+#detailsHeader #upcoming, #last, #correct {
+  float: left;
+  box-sizing: border-box;
+  font-family: frankin_gothic; }
+
+#last {
+  padding-top: 50px;
+  width: 224px;
+  height: 130px;
+  text-align: left; }
+
+#upcoming {
+  padding-top: 50px;
+  width: 224px;
+  height: 130px;
+  text-align: right; }
+
+#correct {
+  padding-top: 20px;
+  width: 224px;
+  height: 130px;
+  text-align: center;
+  font-size: 20px; }
+  #correct p {
+    margin-top: 15px; }
+
+#detailsHeader a {
+  color: #000000;
+  text-decoration: none;
+  display: inline; }
+  #detailsHeader a:hover {
+    text-decoration: underline; }
+
+#number {
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  display: inline-block;
+  background-color: red;
+  font-size: 24px;
+  color: #ffffff;
+  width: auto;
+  min-width: 20px;
+  height: 20px;
+  padding: 8px;
+  padding-bottom: 12px; }
+
+.smallNumber {
+  display: inline-block;
+  font-weight: bold;
+  background-color: red;
+  font-size: 15px;
+  color: #ffffff;
+  width: auto;
+  min-width: 20px;
+  height: 20px;
+  padding: 8px; }
+
+#videoHolder {
+  width: 98%;
+  height: 430px;
+  float: left;
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.75);
+  padding: 20px;
+  box-sizing: border-box; }
+
+#addComment, .reactionPlace b {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 11px; }
+
+#addComment, .reactionPlace input {
+  margin-top: 10px; }
+
+#addComment textarea {
+  width: 420px;
+  height: 65px; }
+
+.smallDescHeaders {
+  margin-top: 20px;
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  color: #e40101;
+  font-family: frankin_gothic;
+  float: left;
+  display: inline-block; }
+
+.reactionPlace {
+  display: inline-block;
+  float: left;
+  width: 470px;
+  position: relative;
+  margin-bottom: 10px; }
+
+.dateWritten {
+  font-weight: bold;
+  color: #a39999;
+  font-size: 11px; }
+
+.reactionPlace p {
+  font-size: 11px;
+  margin-top: 10px;
+  font-family: Tahoma;
+  margin-bottom: 10px; }
+
+.raport a {
+  color: #09b5e7;
+  text-decoration: none; }
+
+.horizontal_dotted_line2 {
+  margin-top: 10px;
+  border-bottom: 1px dotted black;
+  width: 100%; }
+
 .sidebox {
   width: 230px;
   height: auto;

@@ -9,6 +9,8 @@
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/small_dynamic.js"></script>
     <script src="js/fontSize_Chaner.js"></script>
+    <script src="js/jqueryCookie.js"></script>
+    <script src="js/notifyjs.js"></script>
 </head>
 <body>
 <script>

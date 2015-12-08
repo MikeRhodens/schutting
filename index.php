@@ -1,4 +1,5 @@
 <?php
+
 require 'app/core/init.php';
 require 'app/views/header.php';
 require 'app/views/sidebar.php';
