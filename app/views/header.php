@@ -1,3 +1,7 @@
+<?php
+require 'app/controller/header.php'
+?>
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -11,6 +15,7 @@
     <script src="js/fontSize_Chaner.js"></script>
     <script src="js/jqueryCookie.js"></script>
     <script src="js/notifyjs.js"></script>
+    <script src="js/header_liveSearch.js"></script>
 </head>
 <body>
 <script>
