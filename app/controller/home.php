@@ -9,8 +9,8 @@ $home = new home();
 
 $songs = $home->getSongs(Input::get('day'));
 $days = date('d');
-if($days < Input::get('day')){
-    header('location:index.php?page=home&day='.$days.'');
+if ($days < Input::get('day')) {
+    header('location:index.php?page=home&day=' . $days . '');
 }
 $day_songs = '';
 

@@ -47,7 +47,7 @@ require 'app/controller/details.php';
             <textarea id="commentSender"></textarea><br>
             <input type="checkbox" id="checkboxRemember"/><b>Gegevens onthouden</b><br>
             <input type="checkbox" id="sendInfo"/><b>Mail mij bij nieuwe reacties</b>
-            <input type="submit" id="sendMessage"/>
+            <input class="defaultButton" value="VERSTUUR" type="submit" id="sendMessage"/>
     </div>
     <script>
 
