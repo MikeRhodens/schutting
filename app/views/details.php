@@ -60,8 +60,9 @@ require 'app/controller/details.php';
 <?php echo $answer;
 
 
-
+echo $navigation;
 ?>
+
 
 </div>
 

@@ -33,16 +33,16 @@ class details
 
     public function getNames($id)
     {
-        $idPlus = $id +1;
-        $idMin = $id -1;
+        $idPlus = $id + 1;
+        $idMin = $id - 1;
         $query = "SELECT  * FROM songs WHERE id = " . $idPlus . " OR id = " . $idMin . " ORDER by id desc";
         $result = $this->db->query($query);
         return $result;
     }
 
-    public function getComments()
+    public function getComments($offset)
     {
-        $query = "SELECT date_written,name,reaction FROM comments WHERE id_song = " . Input::get('id') . " ORDER BY ID DESC";
+        $query = "SELECT date_written,name,reaction FROM comments WHERE id_song = " . Input::get('id') . " ORDER BY ID DESC Limit 2 OFFSET " . ($offset - 1) . "";
         $result = $this->db->query($query);
         return $result;
     }

@@ -6,10 +6,14 @@
  * Time: 11:35 AM
  */
 $detail = new details();
-
-if(Input::get("id") < (100-getSongsOnDay())){
-    header('location:index.php?page=details&id='.(100-getSongsOnDay()+1).'');
+/*if(null !== Input::get('reactionpage')){
+    echo 'hoi';
+}*/
+$reactionPage = (empty(Input::get('reactionpage'))) ? '1' : Input::get('reactionpage');
+if (Input::get("id") < (100 - getSongsOnDay())) {
+    header('location:index.php?page=details&id=' . (100 - getSongsOnDay() + 1) . '');
 };
+
 if (Input::get("id") && $detail->doDetailExist()) {
     $answer = "";
     $items = $detail->this_objects;
@@ -18,7 +22,7 @@ if (Input::get("id") && $detail->doDetailExist()) {
     $songWriter = $items->name;
     $description = $items->description;
     $video = $items->video;
-    $answers = $detail->getComments();
+    $answers = $detail->getComments($reactionPage);
     $answersAmount = $detail->answersAmount;
     while ($row = $answers->fetch_assoc()) {
         $date = createTrueTimeDate($row['date_written']);
@@ -30,15 +34,13 @@ if (Input::get("id") && $detail->doDetailExist()) {
                                 <div class="horizontal_dotted_line2"></div>
                 </div>';
     }
-
-
     $plusMinNames = $detail->getNames($songTopNr);
     $plus = $plusMinNames->fetch_assoc();
     $min = $plusMinNames->fetch_assoc();
     $mintext = '';
     $plustext = '';
     if ($songTopNr == 100) {
-        $plustext .= '    <div id="last"></div>';
+        $plustext .= '<div id="last"></div>';
     } else {
         $plustext .= '<div id="last">
         <div class="smallNumber"> ' . $plus['hitNr'] . '</div>
@@ -54,6 +56,22 @@ if (Input::get("id") && $detail->doDetailExist()) {
         <a href="?page=details&id=' . $min['hitNr'] . '">' . $min['name'] . ' - ' . $min['artist'] . '</a>
     </div>';
     }
+
+
+
+    //navigation
+    $navigation = '';
+    if($reactionPage != 1) {
+        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage - 1) .'\'>vorige</a><br>';
+    }
+    $a = 1;
+    while($a <($answersAmount/2+1)){
+        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $a . '\'>'.$a.'</a>';
+        $a++;
+    }/*
+    if($reactionPage  != ($answersAmount/2)){
+        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage + 1) .'\'>vorige</a>';
+    }*/
 
 
 } else {
