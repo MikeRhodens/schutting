@@ -8,7 +8,7 @@
 $detail = new details();
 
 if(Input::get("id") < (100-getSongsOnDay())){
-    header('location:index.php?page=details&id='.(100-getSongsOnDay()).'');
+    header('location:index.php?page=details&id='.(100-getSongsOnDay()+1).'');
 };
 if (Input::get("id") && $detail->doDetailExist()) {
     $answer = "";
