@@ -42,7 +42,7 @@ class details
 
     public function getComments($offset)
     {
-        $query = "SELECT date_written,name,reaction FROM comments WHERE id_song = " . Input::get('id') . " ORDER BY ID DESC Limit 2 OFFSET " . ($offset - 1) . "";
+        $query = "SELECT date_written,name,reaction FROM comments WHERE id_song = " . Input::get('id') . " ORDER BY ID DESC Limit 2 OFFSET " . (($offset - 1)*2) . "";
         $result = $this->db->query($query);
         return $result;
     }

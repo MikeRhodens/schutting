@@ -9,11 +9,10 @@ $detail = new details();
 /*if(null !== Input::get('reactionpage')){
     echo 'hoi';
 }*/
-$reactionPage = (empty(Input::get('reactionpage'))) ? '1' : Input::get('reactionpage');
+$reactionPage = (empty(Input::get('reactionPage'))) ? '1' : Input::get('reactionPage');
 if (Input::get("id") < (100 - getSongsOnDay())) {
     header('location:index.php?page=details&id=' . (100 - getSongsOnDay() + 1) . '');
 };
-
 if (Input::get("id") && $detail->doDetailExist()) {
     $answer = "";
     $items = $detail->this_objects;
@@ -58,22 +57,20 @@ if (Input::get("id") && $detail->doDetailExist()) {
     }
 
 
-
     //navigation
     $navigation = '';
-    if($reactionPage != 1) {
-        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage - 1) .'\'>vorige</a><br>';
+    echo $answersAmount;
+    if ($reactionPage != 1) {
+        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage - 1) . '\'>vorige</a><br>';
     }
     $a = 1;
-    while($a <($answersAmount/2+1)){
-        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $a . '\'>'.$a.'</a>';
+    while ($a < ($answersAmount/2)+1) {
+        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $a . '\'>' . $a . ' </a>';
         $a++;
-    }/*
-    if($reactionPage  != ($answersAmount/2)){
-        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage + 1) .'\'>vorige</a>';
-    }*/
-
-
+    }
+    if($reactionPage  != $a-1){
+        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage + 1) .'\'>volgende</a>';
+    }
 } else {
 
     user::getInstance()->redirectTo('home');
