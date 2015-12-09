@@ -9,6 +9,10 @@
 class user{
 
     static $instance = null;
+
+    public function __construct(){
+
+    }
     public function redirectTo($siteToRedirect)
     {
         header("Location: index.php?page=" . $siteToRedirect . "");

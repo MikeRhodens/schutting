@@ -4,10 +4,10 @@
 
 $(document).ready(function () {
     var buttonSearch = $('#submitSearch');
-    var searchWord = $('#inputSearch').val();
+
 
     buttonSearch.click(function(){
-
+        var searchWord = $('#inputSearch').val();
         $.get('index.php', {
                 ajax: 2,
                 phrase: searchWord
