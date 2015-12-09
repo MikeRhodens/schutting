@@ -59,9 +59,9 @@ require 'app/controller/details.php';
 <div id="answer">
 <?php echo $answer;
 
-
-
+echo $navigation;
 ?>
+
 
 </div>
 
