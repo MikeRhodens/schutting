@@ -8,11 +8,11 @@ require 'app/controller/details.php';
 </style>
     <script src="js/detail_addMessage.js"></script>
 <div id="detailsHeader">
-<?php echo $plustext ?>
+<?php echo $mintext ?>
     <div id="correct">
         <div id="number"><?php echo $songTopNr ?></div>
         <p> <?php echo $songWriter. '-'. $songTitle ?></p></div>
-    <?php echo $mintext ?>
+    <?php echo $plustext ?>
 </div>
 
 
