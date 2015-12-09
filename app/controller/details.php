@@ -26,6 +26,32 @@ if (Input::get("id") && $detail->doDetailExist()) {
                                 <div class="horizontal_dotted_line2"></div>
                 </div>';
     }
+
+
+    $plusMinNames = $detail->getNames($songTopNr);
+    $min = $plusMinNames->fetch_assoc();
+    $plus = $plusMinNames->fetch_assoc();
+    $mintext = '';
+    $plustext = '';
+    if ($songTopNr == 100) {
+        $plustext .= '    <div id="last"></div>';
+    } else {
+        $plustext .= '<div id="last">
+        <div class="smallNumber"> ' . $plus['hitNr'] . '</div>
+        <a href="?page=details&id=' . $plus['hitNr'] . '">' . $plus['name'] . ' - ' . $plus['artist'] . '</a>
+    </div>';
+    }
+    $amountOfSongs = (100 - getSongsOnDay());
+    if ($songTopNr <= $amountOfSongs + 1) {
+        $mintext .= '<div id="upcoming"></div>';
+    } else {
+        $mintext .= ' <div id="upcoming">
+        <div class="smallNumber">' . $min['hitNr'] . '</div>
+        <a href="?page=details&id=' . $min['hitNr'] . '">' . $min['name'] . ' - ' . $min['artist'] . '</a>
+    </div>';
+    }
+
+
 } else {
 
     user::getInstance()->redirectTo('home');

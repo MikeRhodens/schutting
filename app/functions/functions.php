@@ -52,3 +52,19 @@ function shortenString($string){
     }
     return $rest;
 }
+function getSongsOnDay(){
+    $date = date("d");
+    $a = 1;
+    $b = 0;
+    $c = 0;
+    while($a < $date){
+        if($b < 8){
+            $c += 5;
+            $b++;
+        }else{
+            $c += 4;
+        }
+        $a++;
+    }
+    return $c;
+}

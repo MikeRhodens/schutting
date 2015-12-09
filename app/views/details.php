@@ -8,17 +8,14 @@ require 'app/controller/details.php';
 </style>
     <script src="js/detail_addMessage.js"></script>
 <div id="detailsHeader">
-    <div id="last">
-        <div class="smallNumber">11</div>
-        <a href="x"> Julien Clerc - This melody</a></div>
+<?php echo $plustext ?>
     <div id="correct">
         <div id="number"><?php echo $songTopNr ?></div>
         <p> <?php echo $songWriter. '-'. $songTitle ?></p></div>
-    <div id="upcoming">
-        <div class="smallNumber">13</div>
-        <a href="x">Yves Montand - La bicyclette</a>
-    </div>
+    <?php echo $mintext ?>
 </div>
+
+
 
 <div id="videoHolder">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?php echo $video ?>?rel=0&amp;showinfo=0"
