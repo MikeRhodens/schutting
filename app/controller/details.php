@@ -48,10 +48,18 @@ if (Input::get("id") && $detail->doDetailExist()) {
     if ($songTopNr <= $amountOfSongs + 1) {
         $mintext .= '<div id="upcoming"></div>';
     } else {
-        $mintext .= ' <div id="upcoming">
+        if (isset($min)) {
+
+            $mintext .= ' <div id="upcoming">
         <div class="smallNumber">' . $min['hitNr'] . '</div>
         <a href="?page=details&id=' . $min['hitNr'] . '">' . $min['name'] . ' - ' . $min['artist'] . '</a>
     </div>';
+        }else{
+            $mintext .= '<div id="upcoming">
+        <div class="smallNumber"> ' . $plus['hitNr'] . '</div>
+        <a href="?page=details&id=' . $plus['hitNr'] . '">' . $plus['name'] . ' - ' . $plus['artist'] . '</a>
+    </div>';
+        }
     }
 
 
@@ -60,12 +68,17 @@ if (Input::get("id") && $detail->doDetailExist()) {
         $navigation .= '<div id="previous"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage - 1) . '\'>vorige</a></div>';
     }
     $a = 1;
-    while ($a < ($answersAmount/2)+1) {
-        $navigation .= '<div class="paginationNum"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $a . '\'>' . $a . ' </a></div>';
+    while ($a < ($answersAmount / 2) + 1) {
+        if ($reactionPage == $a) {
+            $navigation .= '<div class="currentPaginationNr"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $a . '\'>' . $a . ' </a></div>';
+
+        } else {
+            $navigation .= '<div class="paginationNum"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $a . '\'>' . $a . ' </a></div>';
+        }
         $a++;
     }
-    if($reactionPage  != $a-1 && $answersAmount > 2){
-        $navigation .= '<span id="next"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage + 1) .'\'>volgende</a></span>';
+    if ($reactionPage != $a - 1 && $answersAmount > 2) {
+        $navigation .= '<span id="next"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage + 1) . '\'>volgende</a></span>';
     }
 } else {
 

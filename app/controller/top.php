@@ -52,7 +52,7 @@ if ($result) {
             }
             $block = '<div class="rootContainer">
                         <div  class="numbers plus pos'.$current_pos.'" style="">' . $each['id'] . '</div>
-                            <a href=index.php?page=details&id='. $each['id'] .'"><p class="title">' . $each['artist'] . '-' . $each['name'] . '</p></a>
+                            <a href="index.php?page=details&id='. $each['id'] .'"><p class="title">' . $each['artist'] . '-' . $each['name'] . '</p></a>
                         </div>';
             $display .= $block;
         }
