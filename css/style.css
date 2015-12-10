@@ -205,7 +205,8 @@ header {
   -webkit-border-image: -webkit-linear-gradient(black, transparent) 1 100%;
   -moz-border-image: -moz-linear-gradient(black, transparent) 1 100%;
   -o-border-image: -o-linear-gradient(black, transparent) 1 100%;
-  border-image: linear-gradient(to bottom, black, transparent) 1 100%; }
+  border-image: linear-gradient(to bottom, black, transparent) 1 100%;
+  font-size: 15px; }
 #date .past {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#565551+1,949494+20,d6d6d6+47,ffffff+79 */
   background: #565551;
@@ -300,8 +301,8 @@ header {
   margin: 0; }
 
 .content section .inside .footer p {
-  padding-top: 8px;
-  margin-left: 20px;
+  position: absolute;
+  padding-top: 10px;
   display: inline; }
 
 .content section .inside .footer .social {
@@ -540,6 +541,9 @@ header {
 
 .pos4 {
   margin-left: 4px; }
+
+.rootContainer a {
+  color: black; }
 
 .titlePageHeader {
   margin-top: 20px;
