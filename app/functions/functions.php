@@ -11,7 +11,8 @@ function get_days()
         } else if ($days == $date) {
             array_push($days_array, '<div class="correct"><a href="?page=home&day='.$days.'"><p>' . $days . '</p></a></div>');
         } else {
-            array_push($days_array, '<div class="upcomming"><p>' . $days . '</p></div>');
+            $differen = $days - $date;
+            array_push($days_array, '<div class="upcomming" data-upcommingIn="'. $differen .'"><p>' . $days . '</p></div>');
         }
         $days = $days + 1;
     }

@@ -1,5 +1,4 @@
 <?php
-require 'app/controller/header.php'
 ?>
 
 <!DOCTYPE html>
@@ -19,8 +18,14 @@ require 'app/controller/header.php'
 </head>
 <body>
 <script>
-
+$(document).ready(function(){
+    $('.upcomming').click(function(){
+        var daysLeft = $(this).data('upcommingin');
+        $.notify('Deze dag is over '+ daysLeft +' dagen beschrikbaar', 'error')
+    })
+});
 </script>
+<script></script>
 <div id="container">
     <header>
 
@@ -30,12 +35,14 @@ require 'app/controller/header.php'
             <li><a href="/work/">contact</a></li>
             <li><a href="/clients/">meld een fout</a></li>
             <li><a href="/contact/">frequenties</a></li>
-            <li><a href="/contact/">help</a></li>
+            <li><a href="">help</a></li>
             <li><a href="/contact/">rss</a></li>
         </ul>
 
         <img id="logo" src="img/logo.png" alt=""/>
+        <style>
 
+        </style>
         <div id="menuContainer">
             <h1>TOUR TOP 100</h1>
 

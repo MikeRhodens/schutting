@@ -9,14 +9,7 @@ $home = new home();
 
 $songs = $home->getSongs(Input::get('day'));
 $day_songs = '';
-$date = date("d");
-if (!Input::get('page')) {
-    $this->redirectTo("home");
-}
-if (Input::get('page') == "home" && !Input::get('day')) {
-    $this->redirectTo("home&day=" . $date);
-    echo "home&day=" . $date;
-}
+
 while ($current_song = $songs->fetch_assoc()) {
     $comment_amount = $home->commentsAmount($current_song['ID']);
     $day_songs .= '<section>

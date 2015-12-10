@@ -8,7 +8,11 @@
         <li><a href="">contact</a></li>
         <li><a href="">adverteren</a></li>
     </ul>
-
+    <style>
+        .notifyjs-corner{
+            bottom: 0px !important; right: 0px;
+        }
+    </style>
 </footer>
 </body>
 </html>

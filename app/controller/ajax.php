@@ -36,8 +36,23 @@ if (Input::get('ajax')) {
             break;
         case '2':
             if(Input::get('phrase')){
-                echo Input::get('phrase');
-                die();
+                $Phrase = Input::get('phrase');
+                if(strlen($Phrase) >= 3){
+                    if($header->resultsExist($Phrase)){
+                        $rows = array();
+                        foreach($header->returnSearchResult($Phrase) as $row){
+                            $rows[] = $row;
+                        }
+                        print json_encode($rows);
+                    }else{
+                        echo '-3';
+                        die();
+                    }
+                }else{
+                    echo '-2';
+                    die();
+                }
+                    die();
             }else{
                 echo '-1';
                 die();

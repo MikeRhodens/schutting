@@ -10,8 +10,18 @@ class user{
 
     static $instance = null;
 
-    public function __construct(){
-
+    public function __construct()
+    {
+        $date = date("d");
+        if (!Input::get('ajax')) {
+            if (!Input::get('page')) {
+                $this->redirectTo("home");
+            }
+            if (Input::get('page') == "home" && !Input::get('day')) {
+                $this->redirectTo("home&day=" . $date);
+                echo "home&day=" . $date;
+            }
+        }
     }
     public function redirectTo($siteToRedirect)
     {

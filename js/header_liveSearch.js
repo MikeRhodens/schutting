@@ -4,7 +4,16 @@
 
 $(document).ready(function () {
     var buttonSearch = $('#submitSearch');
+    var contentRemoved;
 
+    $('#lol').click(function(){
+        console.log('Haloo')
+        $('#left').html('').hide();
+        $('#left').html(contentRemoved);
+        $('#left').fadeIn(500);
+        $(this).css('display','none');
+
+    });
 
     buttonSearch.click(function(){
         var searchWord = $('#inputSearch').val();
@@ -15,8 +24,10 @@ $(document).ready(function () {
             function (returnedData) {
                 if(returnedData != "-1" && returnedData != "-2" && returnedData != "-3"){
                     var objects =  JSON.parse(returnedData);
-                    $('#left').fadeOut(500).html('');
-                    $.each(objects,function(k,object){
+                    contentRemoved = $('#left').html();
+                    $('#left').html('').hide();
+                    console.log(objects);
+                   $.each(objects,function(k,object){
                         $('#left').append('' +
                         '<section>' +
                         ' <img src="img/random_Avatar.png" alt=""/>' +
@@ -30,9 +41,11 @@ $(document).ready(function () {
                         ' <img src="img/buttons/twitter_icon.png" alt=""/>' +
                         ' <img src="img/buttons/mail_icon.png" alt=""/>' +
                         ' </div> </div> </div>' +
-                        ' </section>')
-
+                        ' </section>');
                     })
+                    $('#lol').css('display','block');
+                    $('#left').fadeIn(1000);
+
                 }else{
                     switch (returnedData){
                         case "-1":
