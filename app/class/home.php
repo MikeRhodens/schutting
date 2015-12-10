@@ -6,7 +6,7 @@
  * Date: 7-12-2015
  * Time: 13:46
  */
-class home
+class Home
 {
     private $connection;
 

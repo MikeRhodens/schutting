@@ -1,5 +1,5 @@
 <?php
-class switch_include{
+class Switch_include{
 
     static $instance = null ;
 

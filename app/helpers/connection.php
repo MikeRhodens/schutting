@@ -1,5 +1,5 @@
 <?php
-class connection
+class Connection
 {
     private static $instance;
     public static function getInstance(){

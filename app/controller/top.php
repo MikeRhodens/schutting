@@ -35,7 +35,7 @@ if ($result) {
 
             $block = '<div class="rootContainer">
                         <div  class="numbers minus pos'.$current_pos.'" style="">' . $each['id'] . '</div>
-                            <a href="index.php?page=details&id='. $each['id'] .'"><p class="title">' . $each['artist'] . '-' . $each['name'] . '</p></a>
+                            <p class="title">' . $each['artist'] . '-' . $each['name'] . '</p>
                         </div>';
 
             $display .= $block;
@@ -50,7 +50,6 @@ if ($result) {
             }else{
                 $current_pos = 4;
             }
-
             $block = '<div class="rootContainer">
                         <div  class="numbers plus pos'.$current_pos.'" style="">' . $each['id'] . '</div>
                             <a href=index.php?page=details&id='. $each['id'] .'"><p class="title">' . $each['artist'] . '-' . $each['name'] . '</p></a>

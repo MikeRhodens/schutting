@@ -6,7 +6,7 @@
  * Time: 10:40 PM
  */
 
-class topList{
+class TopList{
     private $connection;
 
     public function __construct(){

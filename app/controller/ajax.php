@@ -58,6 +58,30 @@ if (Input::get('ajax')) {
                 die();
             }
             break;
+        case '3':
+            if(Input::get('name') && Input::get('email') && Input::get('answer')){
+                $name = Input::get('name');
+                $antwoord = Input::get('answer');
+                $email = Input::get('email');
+                if(strlen($name) >= 3  && strlen($antwoord) >= 5){
+                    if(filter_var($email,FILTER_VALIDATE_EMAIL)){
+                        connection::getInstance()->query("INSERT INTO winprice(email,name,antwoord) VALUES ('". $email ."','". $name ."','". $antwoord ."')");
+                        echo '1';
+                        die();
+                    }else{
+                        echo '-3';
+                        die();
+                    }
+                }else {
+                    echo '-2';
+                    die();
+                }
+            }else{
+                echo '-1';
+                die();
+            }
+            break;
+        die();
     }
 
 }

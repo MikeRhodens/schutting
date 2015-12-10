@@ -6,7 +6,7 @@
  * Date: 12/5/2015
  * Time: 11:37 AM
  */
-class details
+class Details
 {
     private $db;
     public $this_objects;

@@ -1,11 +1,6 @@
 <?php
 require 'app/controller/details.php';
 ?>
-<style>
-    .notifyjs-corner {
-        bottom: 4px !important;
-    }
-</style>
     <script src="js/detail_addMessage.js"></script>
 <div id="detailsHeader">
 <?php echo $mintext ?>
@@ -57,7 +52,9 @@ require 'app/controller/details.php';
     <div class="horizontal_dotted_line"></div>
 </div>
 <div id="answer">
-<?php echo $answer;
+<?php
+
+echo $answer;
 
 echo $navigation;
 ?>

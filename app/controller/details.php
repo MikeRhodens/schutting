@@ -6,12 +6,10 @@
  * Time: 11:35 AM
  */
 $detail = new details();
-/*if(null !== Input::get('reactionpage')){
-    echo 'hoi';
-}*/
-$reactionPage = (empty(Input::get('reactionPage'))) ? '1' : Input::get('reactionPage');
+$reactionPage = (Input::get('reactionPage') == '') ? '1' : Input::get('reactionPage');
+
 if (Input::get("id") < (100 - getSongsOnDay())) {
-    header('location:index.php?page=details&id=' . (100 - getSongsOnDay() + 1) . '');
+    User::getInstance()->redirectTo('details&id=' . (100 - getSongsOnDay() + 1) . '');
 };
 if (Input::get("id") && $detail->doDetailExist()) {
     $answer = "";
@@ -57,9 +55,7 @@ if (Input::get("id") && $detail->doDetailExist()) {
     }
 
 
-    //navigation
     $navigation = '';
-    echo $answersAmount;
     if ($reactionPage != 1) {
         $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage - 1) . '\'>vorige</a><br>';
     }

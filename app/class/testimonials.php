@@ -6,7 +6,7 @@
  * Time: 1:58 PM
  */
 
-class testimonials{
+class Testimonials{
 
     private $connection;
 

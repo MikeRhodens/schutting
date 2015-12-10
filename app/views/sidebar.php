@@ -1,6 +1,6 @@
 <div class="sidebox" >
     <img id="goToTop100" src="img/sidebar_complete.png" alt=""/>
-    <img src="img/sidebar_prijsvraag.png" alt=""/>
+    <img id="goToQuestions" src="img/sidebar_prijsvraag.png" alt=""/>
     <div id="smallDynamic">
         <p>Dynamische tekst</p>
     </div>
@@ -21,5 +21,9 @@
     })
     $('#goToTop100').click(function(){
         window.location.href = location.protocol + '//' + location.host + location.pathname + '?page=top';
+    })
+    $('#goToQuestions').click(function(){
+        window.location.href = location.protocol + '//' + location.host + location.pathname + '?page=prijsvraag';
+
     })
 </script>

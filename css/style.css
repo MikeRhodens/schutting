@@ -128,6 +128,7 @@ header {
   width: 25px;
   height: 23px;
   background-image: url("../img/buttons/search_btn.png");
+  background-color: transparent;
   border: 0;
   outline: 0;
   padding: 0;
@@ -155,7 +156,9 @@ header {
   font-size: 10px; }
 
 #rightContent #fontChanger span:nth-child(2) {
-  font-size: 20px;
+  font-size: 20px; }
+
+#rightContent #fontChanger span.correct {
   color: #07B4E7; }
 
 #rightContent #fontChanger span:nth-child(3) {
@@ -312,7 +315,8 @@ header {
   margin-left: 4px; }
 
 .content section .inside .footer span {
-  color: #07B4E7; }
+  color: #07B4E7;
+  margin-left: 5px; }
 
 .content section .inside .footer a {
   font-weight: bold;
@@ -326,7 +330,6 @@ header {
 
 #DetailsContent {
   width: 100%;
-  font-size: 11px;
   font-family: Tahoma;
   color: #454545;
   margin-top: 35px;
@@ -337,7 +340,7 @@ header {
     float: right;
     margin-top: 10px; }
   #DetailsContent p {
-    font-size: 1em; }
+    font-size: 0.688em; }
 
 #detailsHeader #upcoming, #last, #correct {
   float: left;

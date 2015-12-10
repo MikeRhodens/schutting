@@ -5,5 +5,8 @@ $GLOBALS['config'] = array(
         'username' => 'root',
         'password' => '',
         'db_name' => 'schutting'
+    ),
+    'pagesHeader' => array(
+        'home' => ''
     )
 );

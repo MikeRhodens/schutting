@@ -6,7 +6,7 @@
  * Time: 9:42 PM
  */
 
-class user{
+class User{
 
     static $instance = null;
 
