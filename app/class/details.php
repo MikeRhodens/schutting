@@ -35,7 +35,7 @@ class details
     {
         $idPlus = $id +1;
         $idMin = $id -1;
-        $query = "SELECT  * FROM songs WHERE id = " . $idPlus . " OR id = " . $idMin . "";
+        $query = "SELECT  * FROM songs WHERE id = " . $idPlus . " OR id = " . $idMin . " ORDER by id desc";
         $result = $this->db->query($query);
         return $result;
     }

@@ -6,6 +6,10 @@
  * Time: 11:35 AM
  */
 $detail = new details();
+
+if(Input::get("id") < (100-getSongsOnDay())){
+    header('location:index.php?page=details&id='.(100-getSongsOnDay()).'');
+};
 if (Input::get("id") && $detail->doDetailExist()) {
     $answer = "";
     $items = $detail->this_objects;
@@ -29,8 +33,8 @@ if (Input::get("id") && $detail->doDetailExist()) {
 
 
     $plusMinNames = $detail->getNames($songTopNr);
-    $min = $plusMinNames->fetch_assoc();
     $plus = $plusMinNames->fetch_assoc();
+    $min = $plusMinNames->fetch_assoc();
     $mintext = '';
     $plustext = '';
     if ($songTopNr == 100) {
