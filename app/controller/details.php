@@ -57,15 +57,15 @@ if (Input::get("id") && $detail->doDetailExist()) {
 
     $navigation = '';
     if ($reactionPage != 1) {
-        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage - 1) . '\'>vorige</a><br>';
+        $navigation .= '<div id="previous"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage - 1) . '\'>vorige</a></div>';
     }
     $a = 1;
     while ($a < ($answersAmount/2)+1) {
-        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $a . '\'>' . $a . ' </a>';
+        $navigation .= '<div class="paginationNum"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $a . '\'>' . $a . ' </a></div>';
         $a++;
     }
-    if($reactionPage  != $a-1){
-        $navigation .= '<a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage + 1) .'\'>volgende</a>';
+    if($reactionPage  != $a-1 && $answersAmount > 2){
+        $navigation .= '<span id="next"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage + 1) .'\'>volgende</a></span>';
     }
 } else {
 
