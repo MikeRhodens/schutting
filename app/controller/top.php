@@ -34,13 +34,8 @@ if ($result) {
             }
 
             $block = '<div class="rootContainer">
-<<<<<<< HEAD
-                        <div  class="numbers plus pos'.$current_pos.'" style="">' . $each['id'] . '</div>
-                            <a href="index.php?page=details&id='. $each['id'] .'"><p class="title">' . $each['artist'] . '-' . $each['name'] . '</p></a>
-=======
                         <div  class="numbers minus pos'.$current_pos.'" style="">' . $each['id'] . '</div>
-                            <p class="title">' . $each['artist'] . '-' . $each['name'] . '</p>
->>>>>>> d65c3692bf2287dcea343d86aa72185b41e00b90
+                            <a href="index.php?page=details&id='. $each['id'] .'"><p class="title">' . $each['artist'] . '-' . $each['name'] . '</p></a>
                         </div>';
 
             $display .= $block;
@@ -57,13 +52,8 @@ if ($result) {
             }
 
             $block = '<div class="rootContainer">
-<<<<<<< HEAD
-                        <div  class="numbers minus pos'.$current_pos.'" style="">' . $each['id'] . '</div>
-                            <a href=index.php?page=details&id='. $each['id'] .'"><p class="title">' . $each['artist'] . '-' . $each['name'] . '</p></a>
-=======
                         <div  class="numbers plus pos'.$current_pos.'" style="">' . $each['id'] . '</div>
-                            <p class="title">' . $each['artist'] . '-' . $each['name'] . '</p>
->>>>>>> d65c3692bf2287dcea343d86aa72185b41e00b90
+                            <a href=index.php?page=details&id='. $each['id'] .'"><p class="title">' . $each['artist'] . '-' . $each['name'] . '</p></a>
                         </div>';
             $display .= $block;
         }
