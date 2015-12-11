@@ -7,6 +7,7 @@ $(document).ready(function () {
     var websiteSender = $('#websiteSender');
     var emailSender = $('#emailSender');
     var commentSender = $('#commentSender');
+    var siteId = $('#detailsHeader').data('id')
     $("#checkboxRemember").change(function() {
         if($.cookie('name')) {
             if (!this.checked) {
@@ -83,8 +84,11 @@ $(document).ready(function () {
                     '<br></b><span class="dateWritten">' + day + ' ' + month +' '+ year + ' ' + hour + ':' + minuts + '</span><p>' + commentSender.val() +
                     '</p><b class="raport"><a href="">Waarschuw de redactie over deze</a></b><div class="horizontal_dotted_line2"></div></div>');
                     $('.addedRightNow').hide().fadeIn(2000)
-                    $('.reactionPlace').removeClass('addedRightNow');
 
+                    $('.reactionPlace').removeClass('addedRightNow');
+                    if($('div[class=reactionPlace]').length > 2) {
+                        $("#answer").children("div[class=reactionPlace]:last").detach();
+                    }
                     if(!$.cookie('name')){
                         nameSender.val('');
                         emailSender.val('');
@@ -92,19 +96,20 @@ $(document).ready(function () {
                     }
                     commentSender.val('');
                     sendMessagesAmount.html(parseInt(sendMessagesAmount.html())+1).hide().fadeIn('fast');
-
+                    if(isEven(parseInt($(sendMessagesAmount).text()))){
+                        var newValue = parseInt($("div[class=paginationNum]:last").text()) + 1;
+                        $('#paginationPlacement').append('<div class="paginationNum"><a href="index.php?page=details&id='+ siteId +'&reactionPage='+newValue+'">'+ newValue +'</a></div>');
+                    }else{
+                        console.log('Odd');
+                    }
+                    $.notify("Uw bericht werd toegevoegd", "success");
                 }
                 if(answer == 0) {
                     $.notify("Alle velden moeten worden ingevoeld", "error");
                 }else if(answer == -1){
                     $.notify("Uw E-mail adres is niet correct", "error");
-                }else{
-                    $.notify("Uw bericht werd toegevoegd", "success");
-
                 }
             })
     })
-
-
 })
 

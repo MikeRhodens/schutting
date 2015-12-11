@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/css
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+RewriteRule ^page/([0-9a-zA-Z_-]+)/([0-9]+)$ index.php?page=$1&day=$2 [NC,L]

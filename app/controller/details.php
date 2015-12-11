@@ -17,6 +17,7 @@ if (Input::get("id") && $detail->doDetailExist()) {
     $songTopNr = $items->hitNr;
     $songTitle = $items->artist;
     $songWriter = $items->name;
+    $id = $items->ID;
     $description = $items->description;
     $video = $items->video;
     $answers = $detail->getComments($reactionPage);
@@ -65,20 +66,20 @@ if (Input::get("id") && $detail->doDetailExist()) {
 
     $navigation = '';
     if ($reactionPage != 1) {
-        $navigation .= '<div id="previous"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage - 1) . '\'>vorige</a></div>';
+        $navigation .= '<div id="previous"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage - 1) . '#commentJump\'>vorige</a></div>';
     }
-    $a = 1;
-    while ($a < ($answersAmount / 2) + 1) {
-        if ($reactionPage == $a) {
-            $navigation .= '<div class="currentPaginationNr"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $a . '\'>' . $a . ' </a></div>';
+    $pageNumber = 1;
+    while ($pageNumber < ($answersAmount / 2) + 1) {
+        if ($reactionPage == $pageNumber) {
+            $navigation .= '<div class="currentPaginationNr"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $pageNumber . '#commentJump\'>' . $pageNumber . ' </a></div>';
 
         } else {
-            $navigation .= '<div class="paginationNum"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $a . '\'>' . $a . ' </a></div>';
+            $navigation .= '<div class="paginationNum"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . $pageNumber . '#commentJump\'>' . $pageNumber . ' </a></div>';
         }
-        $a++;
+        $pageNumber++;
     }
-    if ($reactionPage != $a - 1 && $answersAmount > 2) {
-        $navigation .= '<span id="next"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage + 1) . '\'>volgende</a></span>';
+    if ($reactionPage != $pageNumber - 1 && $answersAmount > 2) {
+        $navigation .= '<span id="next"><a href=\'index.php?page=details&id=' . Input::get("id") . '&reactionPage=' . ($reactionPage + 1) . '#commentJump\'>volgende</a></span>';
     }
 } else {
 

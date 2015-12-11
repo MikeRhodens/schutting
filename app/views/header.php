@@ -9,6 +9,7 @@ require 'app/controller/header.php';
     <link rel="stylesheet" href="css/style.css"/>
     <title>Radio 1 Tour Top 100</title>
     <script src="js/jquery.js"></script>
+    <script src="js/functions.js"></script>
     <script src="js/small_dynamic.js"></script>
     <script src="js/fontSize_Chaner.js"></script>
     <script src="js/jqueryCookie.js"></script>

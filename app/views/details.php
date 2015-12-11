@@ -2,7 +2,7 @@
 require 'app/controller/details.php';
 ?>
     <script src="js/detail_addMessage.js"></script>
-<div id="detailsHeader">
+<div id="detailsHeader" data-id="<?php echo $id ?>">
 <?php echo $mintext ?>
     <div id="correct">
         <div id="number"><?php echo $songTopNr ?></div>
@@ -44,9 +44,7 @@ require 'app/controller/details.php';
             <input type="checkbox" id="sendInfo"/><b>Mail mij bij nieuwe reacties</b>
             <input class="defaultButton" value="VERSTUUR" type="submit" id="sendMessage"/>
     </div>
-    <script>
 
-    </script>
 <div class="smallDescHeaders">
     Reacties op dit bericht [<?php echo  '<span id="sendedMsg">' . $answersAmount . '</span>' ?>]
     <div class="horizontal_dotted_line"></div>

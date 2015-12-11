@@ -17,7 +17,7 @@ $day_songs = '';
 while ($current_song = $songs->fetch_assoc()) {
     $comment_amount = $home->commentsAmount($current_song['ID']);
     $day_songs .= '<section>
-    <img src="img/random_Avatar.png" alt=""/>
+    <img width="220px" src="http://img.youtube.com/vi/'. $current_song['video'] .'/0.jpg" alt=""/>
     <div class="inside">
         <div class="header">
             <div class="num">' . $current_song['hitNr'] . '</div><p>' . $current_song['name'] . ' : ' . $current_song['artist'] . '</p>
